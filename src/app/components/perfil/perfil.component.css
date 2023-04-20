@@ -1,0 +1,78 @@
+/* Perfil */
+
+.perfil img {
+    border-radius: 20px 0px 0px 20px;
+    height: 100%;
+}
+
+.perfil {
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    margin: 30px 150px;
+    border-radius: 20px;
+    background: white;
+}
+
+.perfil h1 {
+    margin: 30px 10px;
+    letter-spacing: 2px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.perfil p {
+    margin: 30px 10px;
+    letter-spacing: 2px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 17px;
+    text-align: justify;
+}
+
+.perfil button {
+    background-color: #1c243c;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 17px;
+}
+
+.perfil a .btn:hover {
+    color:#1c243c;
+    background-color: transparent;
+    border: 2px solid #1c243c;
+}
+
+.perfil a {
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+@media (max-width: 992px) {
+    .perfil img {
+        display: flex;
+        margin: 30px auto;
+        justify-self: center;
+        height: 300px;
+        border-radius: 20px;
+    }
+    .perfil {
+        margin: 30px 20px;
+    }
+    .perfil h1 {
+        text-align: center;
+        margin: -30px 5px;
+    }
+    .perfil p {
+        text-align: center;
+        margin: 40px 5px;
+    }
+    .perfil a {
+        display: flex;
+        justify-content: center;
+        margin-right: auto;
+        color: #e2ebf1
+    }
+}

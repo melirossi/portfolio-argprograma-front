@@ -1,0 +1,129 @@
+{
+	"bienvenida": "BIENVENIDO A MI PORTFOLIO WEB",
+	"logo": "/assets/Images/ArgPrograma.svg",
+	"foto": "/assets/Images/Carnet.png",
+	"perfil": "Cuento con dos años de experiencia como becaria doctoral en el área de Riesgo Ambiental, donde trabajo con datos de todo tipo en equipos multidisciplinarios. Actualmente, me encuentro en la búsqueda de nuevas oportunidades laborales dentro del área IT para seguir desarrollando mis habilidades analíticas e informáticas.",
+	"hab_blandas": [{
+			"nombre": "Curiosidad",
+			"descripcion": "Siempre tengo el impulso de encontrar respuestas a las preguntas que me formulo."
+		},
+		{
+			"nombre": "Creatividad",
+			"descripcion": "Tengo una gran facilidad para crear nuevas ideas y encontrar soluciones innovadoras."
+		}
+	],
+	"idiomas": {
+		"nombre": "Inglés",
+		"descripcion": "Egresé en diciembre del 2022 del programa “Inglés para el Trabajo” dictado por Pearson English (curso de inglés orientado a la información y tecnología, equivalente al nivel B2)."
+	},
+	"hab_duras": [{
+		"lenguajes": {
+			"logo1": "/assets/Images/Bootstrap.png",
+			"logo2": "/assets/Images/CSS.png",
+			"logo3": "/assets/Images/HTML.png",
+			"logo4": "/assets/Images/JavaScript.png",
+			"logo5": "/assets/Images/Java.png",
+			"logo6": "/assets/Images/Python.png"
+		},
+		"datos": {
+			"logo1": "/assets/Images/Mysql.png"
+		},
+		"visualizacion": {
+			"logo1": "/assets/Images/Datastudio.jpg",
+			"logo2": "/assets/Images/Figma.png",
+			"logo3": "/assets/Images/Inkscape.png",
+			"logo4": "/assets/Images/Premiere.png"
+		},
+		"otros": {
+			"logo1": "/assets/Images/Arcgis.png",
+			"logo2": "/assets/Images/Git.png",
+			"logo3": "/assets/Images/Qgis.png"
+		}
+	}],
+	"experiencia": [{
+		"logo": "/assets/Images/Conicet.png",
+		"nombre": "Becaria Doctoral en Temas Estratégicos",
+		"fecha": "04/2021 — Actualidad",
+		"lugar": "CONICET, Buenos Aires",
+		"d1": "➜ Realicé un análisis estadístico de datos en muestras de sedimentos.",
+		"d2": "➜ Confeccioné cartografía utilizando tecnologías SIG a partir de datos geoespaciados.",
+		"d3": "➜ Realicé matrices de ponderación para zonificar los riesgos ambientales de la zona de estudio.",
+		"d4": "➜ Interpreté necesidades funcionales de la zona de estudio y generé soluciones."
+	}],
+	"educacion": [{
+			"logo": "/assets/Images/ArgPrograma.svg",
+			"nombre": "#YoProgramo",
+			"fecha": "10/2022 — 05/2023",
+			"lugar": "Ministerio de Economía e Instituto Nacional de Tecnología Industrial",
+			"d1": "➜ Nociones de Scrum y gestión del tiempo.",
+			"d2": "➜ Arquitectura web.",
+			"d3": "➜ Uso de Git y GitHub.",
+			"d4": "➜ Front End: HTML, CSS, Bootstrap, JavaScript, TypeScript y Angular.",
+			"d5": "➜ Bases de Datos.",
+			"d6": "➜ Back End: Java, Java Server Pages y Spring Boot."
+		},
+		{
+			"logo": "/assets/Images/CAC.png",
+			"nombre": "Full Stack Java",
+			"fecha": "08/2022 — 12/2022",
+			"lugar": "Codo a Codo 4.0",
+			"d1": "➜ Nociones de Scrum y arquitectura web.",
+			"d2": "➜ Uso de Git y GitHub.",
+			"d3": "➜ Front End: HTML, CSS, Bootstrap y JavaScript.",
+			"d4": "➜ Bases de Datos.",
+			"d5": "➜ Back End: Java y Java Server Pages."
+		},
+		{
+			"logo": "/assets/Images/CAC.png",
+			"nombre": "Big Data",
+			"fecha": "03/2022 — 07/2022",
+			"lugar": "Codo a Codo 4.0",
+			"d1": "➜ Conceptos sobre bases de datos, big data, lógica, estadística y algoritmos.",
+			"d2": "➜ SQL.",
+			"d3": "➜ Excel y Google Data Studio para análisis de datos.",
+			"d4": "➜ Python orientado a datos."
+		},
+		{
+			"logo": "/assets/Images/Exactas.png",
+			"nombre": "Licenciada en Ciencias Geológicas",
+			"fecha": "03/2015 — 03/2020",
+			"lugar": "Universidad de Buenos Aires0",
+			"d1": "➜ Durante la licenciatura aprendí sobre cristalografía, óptica, dinámica de fluidos, termodinámica, biología, climatología, mecánica, materiales, topografía, entre otras áreas.",
+			"d2": "➜ Trabajé con cartografía, sistemas informáticos, representación de datos, gestión ambiental y de riesgo.",
+			"d3": "➜ En mi Trabajo Final de Licenciatura realicé una caracterización de sedimentos y aguas superficiales dentro de la segunda sección del Delta del Paraná."
+		}
+	],
+	"proyectos": [{
+			"foto": "/assets/Images/Portfolio.png",
+			"nombre": "Portfolio",
+			"descripcion": "Mi Portfolio Web donde se pueden visualizar experiencia, educación, habilidades, proyectos realizados, entre otros apartados.",
+			"fecha": "Año: 2023",
+			"t1": "/assets/Images/Bootstrap.png",
+			"t2": "/assets/Images/CSS.png",
+			"t3": "/assets/Images/HTML.png",
+			"t4": "/assets/Images/JavaScript.png",
+			"url": "https://github.com/melirossi/MyPortfolio_FrontEnd"
+		},
+		{
+			"foto": "/assets/Images/PatientRecord.png",
+			"nombre": "Registro de pacientes",
+			"descripcion": "Página dinámica para una veterinaria donde se puede ingresar información de los pacientes, modificarla y eliminarla de forma simple y atractiva.",
+			"fecha": "Año: 2022",
+			"t1": "/assets/Images/Java.png",
+			"t2": "/assets/Images/Mysql.png",
+			"t3": "/assets/Images/CSS.png",
+			"url": "https://github.com/melirossi/Vet_Patient_Record"
+		},
+		{
+			"foto": "/assets/Images/DatosPython.png",
+			"nombre": "Exploración de datos de comercio",
+			"descripcion": "Integración y análisis de sets de datos de registros de la actividad de un comercio a lo largo de los meses para tomar decisiones.",
+			"fecha": "Año: 2022",
+			"t1": "/assets/Images/Python.png",
+			"url": "https://deepnote.com/@melisa/TP-Final-Melisa-Rossi-ba95f8d2-7267-49c4-97f7-c70b16079419"
+		}
+	],
+	"ubicacion": "Buenos Aires, Argentina",
+	"correo": "melisa.s.rossi@gmail.com",
+	"copyright": "2023 DESIGNED & DEVELOPED BY MELISA ROSSI"
+}

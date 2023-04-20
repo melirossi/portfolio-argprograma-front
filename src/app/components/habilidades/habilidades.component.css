@@ -1,0 +1,88 @@
+/* Habilidades */
+
+.habilidades {
+    background: #e2ebf1;
+}
+
+
+.habilidades h1 {
+    margin: 30px auto;
+    letter-spacing: 2px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.habilidades .btn {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Signika Negative', sans-serif;
+    margin: -5px 15px;
+    width: 90%;
+    font-size: 17px;    
+    pointer-events: none;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    background: #7aa3bf;
+}
+
+.habilidades .blandas, .idiomas {
+    color: #1c243c;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    margin: 20px auto;
+    width: 90%;
+    padding: 7px;
+    background: white;
+}
+
+.habilidades .idiomas {
+    padding-bottom: 25px;
+}
+
+.habilidades .duras {
+    color: #1c243c;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    margin: 20px auto;
+    width: 90%;
+    padding: 10px;
+    background: white;
+}
+
+.habilidades p {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 17px;
+    margin: auto 5px 20px;
+    display: inline-flex;
+}
+
+.habilidades span {
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 17px;
+    margin: auto 5px 20px;
+}
+
+.habilidades h2 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 25px auto 8px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 17px;
+}
+
+.habilidades img {
+    display: inline-flex;
+    margin: 8px 15px;
+    height: 40px;
+}
+
+@media (max-width: 992px) {
+    .habilidades .habduras {
+        margin-top: 20px;
+    }
+}

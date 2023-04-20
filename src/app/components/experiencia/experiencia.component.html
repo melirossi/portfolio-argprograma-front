@@ -1,0 +1,52 @@
+<div class="experiencia" id="experiencia">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h1>Experiencia</h1>
+      </div>
+    </div>
+
+    <div class="col-lg-2">
+      <button class="btn btn-dark" type="button" routerLink="/nuevaexp" *ngIf="isLogged">
+        Nueva experiencia
+      </button>
+    </div>
+
+    <div>
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Experiencia of expe">
+            <td>{{Experiencia.imageE}}</td>
+            <td>{{Experiencia.tituloE}}</td>
+            <td>{{Experiencia.fechaE}}</td>
+            <td>{{Experiencia.nombreE}}</td>
+            <td>{{Experiencia.descripcionE}}</td>
+            <td>EDITAR</td>
+            <td>BORRAR</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+
+    <!--<li *ngFor="let Experiencia of expe">
+      <div class="row">          
+        <div class="col-sm-12 col-lg-1"> 
+          <img class="img-fluid" [src]={{Experiencia.imageE}} alt="Conicet">                                 
+        </div>    
+        <div class="col-sm-12 col-lg-7">
+          <h2>{{Experiencia.tituloE}}</h2> 
+          <h3>{{Experiencia.}}</h3>      
+        </div>  
+        <div class="col-sm-12 col-lg-4">
+          <h4>{{Experiencia.fechaE}}</h4>              
+        </div> 
+      </div>
+      <div class="row descripcion">
+        <div class="col-sm-12 col-md-11 offset-md-1">
+          <p>{{Experiencia.descripcionE}}</p>
+        </div>
+      </div>
+    </li> -->
+
+  </div>
+</div>

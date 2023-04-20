@@ -1,0 +1,70 @@
+/* Mensaje de bienvenida */
+
+.bienvenida {
+    display: flex;
+    background-color: #e2ebf1;    
+    font-family: "Manrope", sans-serif;
+    letter-spacing: 5px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.bienvenida p {
+    margin: 3px auto;
+}
+
+/* NavBar */
+
+.navbar {
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+    background-color: white;  
+}
+
+.navbar img {
+    margin-left: 40px;
+}
+
+.collapse a {
+    color: grey;
+    font-family: "Manrope", sans-serif;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.collapse i {
+    color: grey;
+    font-size: 20px;
+    margin: 7px 5px;
+}
+
+.collapse .fa-solid {
+    color: #7aa3bf;
+    font-size: 19px;
+    margin: 7px 40px;
+}
+
+.collapse a:hover {
+    color: #7aa3bf;
+}
+
+.collapse i:hover {
+    color: #7aa3bf;
+}
+
+.collapse .fa-solid:hover {
+    color: grey;
+    cursor: pointer;
+}
+
+nav .collapse {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1097px) and (min-width: 992px) {
+    .navbar img {
+        display: none;
+    }
+}

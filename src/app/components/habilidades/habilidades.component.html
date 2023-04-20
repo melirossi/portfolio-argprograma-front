@@ -1,0 +1,55 @@
+<div class="habilidades"  id="habilidades">
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col">
+          <h1>Habilidades</h1>
+        </div>
+      </div>
+
+      <div class="row text-center">          
+          <div class="col-sm-12 col-lg-6"> 
+            <button type="button" class="btn nohover">Blandas</button>             
+            <div class="blandas">
+              <li>
+                <h2>Curiosidad</h2>
+                <p>Tengo una gran facilidad para crear nuevas ideas y encontrar soluciones innovadoras.</p>  
+              </li>                               
+            </div>              
+
+            <button type="button" class="btn nohover mt-3">Idiomas</button>    
+            
+            <div class="idiomas">
+              <h2>Inglés</h2>
+              <span>Egresé en diciembre del 2022 del programa “Inglés para el Trabajo” dictado por Pearson English (curso de inglés orientado a la información y tecnología, equivalente al nivel B2).</span>                               
+            </div>         
+          </div>
+
+          <div class="col-sm-12 col-lg-6">
+            <button type="button" class="btn nohover habduras">Duras</button>
+            <div class="duras">
+              <h2>Lenguajes y frameworks</h2> 
+              <li>
+                <img class="img-fluid" src="/assets/Images/Bootstrap.png" alt="bootstrap">
+              </li>  
+
+              <h2>Bases de datos</h2>
+              <li>
+                <img class="img-fluid" src="/assets/Images/Mysql.png" alt="mysql">
+              </li> 
+
+              <h2>Herramientas de visualización</h2>
+              <li>
+                <img class="img-fluid" src="/assets/Images/Datastudio.jpg" alt="datastudio">
+              </li>
+              
+              <h2>Otras herramientas</h2>
+                <li *ngFor="let hab_duras of durasList">
+                <img class="img-fluid" src="/assets/Images/Arcgis.png" alt="arcgis">
+              </li>
+              
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
