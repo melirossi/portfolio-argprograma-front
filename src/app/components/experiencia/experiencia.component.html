@@ -21,8 +21,8 @@
             <td>{{Experiencia.fechaE}}</td>
             <td>{{Experiencia.nombreE}}</td>
             <td>{{Experiencia.descripcionE}}</td>
-            <td>EDITAR</td>
-            <td>BORRAR</td>
+            <td *ngIf="isLogged"><button class="btn btn-secondary" routerLink="/editexp/{{Experiencia.id}}">Editar</button></td>
+            <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)">Eliminar</button></td>
           </tr>
         </tbody>
       </table>
