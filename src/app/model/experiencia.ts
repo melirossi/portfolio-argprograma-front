@@ -11,7 +11,7 @@ export class Experiencia {
         this.tituloE = tituloE;
         this.fechaE = fechaE;
         this.nombreE = nombreE;
-        this.descripcionE = descripcionE
+        this.descripcionE = descripcionE;
     }
     
 }

@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreHB">Nombre de la habilidad blanda</label>
+                    <input type="text" class="form-control" id="nombreHB" name="nombreHB" [(ngModel)]="nombreHB" required>
+                </div>
+                <div class="form-group">
+                    <label for="descripHB">Descripción de la habilidad blanda</label>
+                    <input type="text" class="form-control" id="descripHB" name="descripHB" [(ngModel)]="descripHB" required>
+                </div>               
+                <button class="btn btn-primary">
+                    Agregar habilidad blanda
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

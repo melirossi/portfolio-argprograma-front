@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/Services/portfolio.service';
 import { Router } from '@angular/router';
 import { TokenService } from 'src/app/Services/token.service';
+import { persona } from 'src/app/model/persona.model';
+import { PersonaService } from 'src/app/Services/persona.service';
 
 @Component({
   selector: 'app-nav',
@@ -10,27 +12,30 @@ import { TokenService } from 'src/app/Services/token.service';
 })
 export class NavComponent {
 
-  isLogged = false;
-    
-  miPortfolio:any;
+  persona: persona = null;
 
-  constructor(private router: Router, private tokenService: TokenService, private datosPortfolio:PortfolioService) {}
+  isLogged = false;
+
+  constructor(public personaService: PersonaService, private router: Router, private tokenService: TokenService) {}
 
   ngOnInit(): void {
+    this.cargarPersona();
     if(this.tokenService.getToken()){
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.miPortfolio=data;
-    });
   }
 
   onLogOut():void{
     this.tokenService.logOut();
     window.location.reload();
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data => 
+      {this.persona = data}
+    )
   }
 
 }

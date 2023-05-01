@@ -7,28 +7,38 @@
       </div>
     </div>
 
-    <li>
+    <div class="col-lg-2">
+      <button class="btn btn-dark" type="button" routerLink="/nuevaedu" *ngIf="isLogged">
+        Nueva educación
+      </button>
+    </div>
+
+    <li *ngFor="let Educacion of educacion">
       <div class="row">          
         <div class="col-sm-12 col-lg-1"> 
           <img class="img-fluid" src="/assets/Images/ArgPrograma.svg" alt="Argentina Programa">                                 
         </div>    
         <div class="col-sm-12 col-lg-7">
-          <h2>#YoProgramo</h2> 
-          <h3>10/2022 — 05/2023</h3>      
+          <h2>{{Educacion.cursoEdu}}</h2> 
+          <h3>{{Educacion.instiEdu}}</h3>      
         </div>  
         <div class="col-sm-12 col-lg-4">
-          <h4>Ministerio de Economía e Instituto Nacional de Tecnología Industrial</h4>              
+          <h4>{{Educacion.fechaEdu}}</h4>              
         </div> 
       </div>
       <div class="row descripcion">
         <div class="col-sm-12 col-md-11 offset-md-1">
-          <p>Nociones de Scrum y gestión del tiempo.</p>
+          <p>{{Educacion.descrpEdu}}</p>
         </div>
       </div>
-    </li>      
-    
-    <a href="https://www.linkedin.com/in/melisasrossi" target="_blank"><button type="button" class="btn">Ver más en LinkedIn</button></a>
-    
+      <div class="row" *ngIf="isLogged">
+        <div class="col">
+          <button class="btn btn-secondary" routerLink="/editedu/{{Educacion.id}}">Editar</button>
+          <button class="btn btn-danger" (click)="delete(Educacion.id)">Eliminar</button>
+        </div>
+      </div>
+    </li>     
+        
   </div>
 </div>
 

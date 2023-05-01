@@ -12,41 +12,31 @@
       </button>
     </div>
 
-    <div>
-      <table class="table">
-        <tbody>
-          <tr *ngFor="let Experiencia of expe">
-            <td>{{Experiencia.imageE}}</td>
-            <td>{{Experiencia.tituloE}}</td>
-            <td>{{Experiencia.fechaE}}</td>
-            <td>{{Experiencia.nombreE}}</td>
-            <td>{{Experiencia.descripcionE}}</td>
-            <td *ngIf="isLogged"><button class="btn btn-secondary" routerLink="/editexp/{{Experiencia.id}}">Editar</button></td>
-            <td *ngIf="isLogged"><button class="btn btn-danger" (click)="delete(Experiencia.id)">Eliminar</button></td>
-          </tr>
-        </tbody>
-      </table>
-  </div>
-
-    <!--<li *ngFor="let Experiencia of expe">
-      <div class="row">          
+  <li *ngFor="let Experiencia of expe">
+    <div class="row">          
         <div class="col-sm-12 col-lg-1"> 
-          <img class="img-fluid" [src]={{Experiencia.imageE}} alt="Conicet">                                 
+          <img class="img-fluid" src="/assets/Images/ArgPrograma.svg" alt="Conicet">                                 
         </div>    
         <div class="col-sm-12 col-lg-7">
           <h2>{{Experiencia.tituloE}}</h2> 
-          <h3>{{Experiencia.}}</h3>      
+          <h3>{{Experiencia.nombreE}}</h3>      
         </div>  
         <div class="col-sm-12 col-lg-4">
           <h4>{{Experiencia.fechaE}}</h4>              
         </div> 
+    </div>
+    <div class="row descripcion">
+      <div class="col-sm-12 col-md-11 offset-md-1">
+        <p>{{Experiencia.descripcionE}}</p>
       </div>
-      <div class="row descripcion">
-        <div class="col-sm-12 col-md-11 offset-md-1">
-          <p>{{Experiencia.descripcionE}}</p>
-        </div>
+    </div>
+    <div class="row" *ngIf="isLogged">
+      <div class="col">
+        <button class="btn btn-secondary" routerLink="/editexp/{{Experiencia.id}}">Editar</button>
+        <button class="btn btn-danger" (click)="delete(Experiencia.id)">Eliminar</button>
       </div>
-    </li> -->
+    </div>
+  </li> 
 
   </div>
 </div>

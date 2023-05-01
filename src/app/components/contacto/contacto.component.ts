@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/Services/portfolio.service';
+import { PersonaService } from 'src/app/Services/persona.service';
+import { TokenService } from 'src/app/Services/token.service';
+import { persona } from 'src/app/model/persona.model';
 
 @Component({
   selector: 'app-contacto',
@@ -8,15 +10,25 @@ import { PortfolioService } from 'src/app/Services/portfolio.service';
 })
 export class ContactoComponent {
 
-  contacto:any;
+  persona: persona = null;
 
-  constructor(private datosPortfolio:PortfolioService) {}
+  constructor(public personaService: PersonaService, public tokenService: TokenService) {}
 
-  ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.contacto=data;
-    });
+  isLogged = false;
+
+  ngOnInit(): void {    
+    this.cargarPersona();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data => 
+      {this.persona = data}
+    )
   }
 
 }

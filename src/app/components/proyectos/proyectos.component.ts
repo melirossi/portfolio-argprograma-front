@@ -1,22 +1,47 @@
 import { Component } from '@angular/core';
-import { PortfolioService } from 'src/app/Services/portfolio.service';
+import { ProyectosService } from 'src/app/Services/proyectos.service';
+import { TokenService } from 'src/app/Services/token.service';
+import { Proyectos } from 'src/app/model/proyectos';
+
 
 @Component({
   selector: 'app-proyectos',
   templateUrl: './proyectos.component.html',
   styleUrls: ['./proyectos.component.css']
 })
+
 export class ProyectosComponent {
 
-  proyectosList:any;
+  proyectos: Proyectos[] = [];
 
-  constructor(private datosPortfolio:PortfolioService) {}
+  constructor(private proyectsService: ProyectosService, private tokenService: TokenService) {}
 
-  ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.proyectosList=data.proyectos;
-    });
+  isLogged = false;
+
+  ngOnInit(): void{
+    this.cargarProyecto();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarProyecto(): void{
+    this.proyectsService.lista().subscribe(data =>{
+      this.proyectos = data;
+    })
+  }
+
+  delete(id?: number){
+    if(id != undefined){
+      this.proyectsService.delete(id).subscribe(data =>{
+        this.cargarProyecto();
+      }, err => {
+        alert("No se pudo eliminar");
+      }
+      )
+    }
   }
 
 }

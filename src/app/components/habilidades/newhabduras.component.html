@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreHD">Nombre de la habilidad dura</label>
+                    <input type="text" class="form-control" id="nombreHD" name="nombreHD" [(ngModel)]="nombreHD" required>
+                </div>        
+                <button class="btn btn-primary">
+                    Agregar habilidad dura
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
