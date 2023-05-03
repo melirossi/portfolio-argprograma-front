@@ -16,12 +16,34 @@
     align-items: center;    
 }
 
+.btn-proyectos {
+    color: #1c243c;
+    border-radius: 50%;
+    padding: 12px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5.7px;
+}
+
+.btn-proyectos:hover {
+    border-color: #1c243c;
+    border-width: 2px;
+}
+
+.btn-proyectos i {
+    font-size: 20px;
+}
+
 .proyectos .card {
     width: 400px;
     border-radius: 20px;
-    margin: auto auto 30px;
+    margin: auto auto 15px;
     box-shadow: 0 3px 7px rgba(0,0,0,0.3);
-    height: 830px;    
+    height: 700px;    
 }
 
 img {
@@ -55,11 +77,6 @@ img {
     text-align: center;
 }
 
-.proyectos .list-group-item img {
-    width: 10%;
-    box-shadow: none;
-    margin-right: 10px;
-}
 
 .proyectos ul li {
     display: flex;
@@ -86,35 +103,32 @@ img {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    margin: 10px auto;
+    margin: auto;
     padding: 5px;
     border-radius: 10px;
     width: 70%
 }
 
-.masproyect button {
-    background-color: #1c243c;
-    color:white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Signika Negative', sans-serif;
-    font-size: 17px;
-    margin: 10px auto 30px;    
+.url {
+    margin-top: -100px;
 }
 
-.masproyect {
-    background-color: #e2ebf1;
+.btn:hover {
+    color: #1c243c;
+ }
+
+ .acciones {
+    text-align: end;
+    margin-right: 50px;
+    margin-top: -30px;
+    margin-bottom: 20px;
 }
 
-.masproyect a .btn:hover {
-    color:#1c243c;
-    background-color: transparent;
-    border: 2px solid #1c243c;
+.btn-editar {
+    color: #5e5e5e;
 }
 
-.masproyect a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
+.btn-eliminar {
+    color: #dc3545;
 }
 

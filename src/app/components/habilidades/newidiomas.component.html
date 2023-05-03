@@ -1,18 +1,21 @@
 <div class="container">
     <div class="row">
         <div>
+            <h1>Agregar Idioma</h1>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreI">Nombre del idioma</label>
+                    <label for="nombreI">Nombre del idioma:</label>
                     <input type="text" class="form-control" id="nombreI" name="nombreI" [(ngModel)]="nombreI" required>
                 </div>
                 <div class="form-group">
                     <label for="descripI">Nivel alcanzado:</label>
                     <input type="text" class="form-control" id="descripI" name="descripI" [(ngModel)]="descripI" required>
                 </div>               
-                <button class="btn btn-primary">
-                    Agregar idioma
-                </button>
+                <div class="botonera">
+                    <button class="btn btn-primary">
+                        Agregar idioma
+                    </button>
+                </div>
             </form>
         </div>
     </div>

@@ -15,7 +15,7 @@
     justify-content: center;
 }
 
-.habilidades .btn {
+.habilidades .nohover {
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -27,6 +27,7 @@
     padding: 10px;
     box-shadow: 0 3px 7px rgba(0,0,0,0.3);
     background: #7aa3bf;
+    pointer-events: none;
 }
 
 .habilidades .blandas, .idiomas {
@@ -35,8 +36,8 @@
     border-radius: 20px;
     margin: 20px auto;
     width: 90%;
-    padding: 7px;
     background: white;
+    padding: 5px;
 }
 
 .habilidades .idiomas {
@@ -49,7 +50,7 @@
     border-radius: 20px;
     margin: 20px auto;
     width: 90%;
-    padding: 10px;
+    padding: 5px;
     background: white;
 }
 
@@ -74,10 +75,59 @@
     font-size: 17px;
 }
 
-.habilidades img {
-    display: inline-flex;
-    margin: 8px 15px;
-    height: 40px;
+.btn-habilidad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -10px 10px 50px;
+    background-color: #1c243c;
+    width: 230px;
+    color: white;
+    text-transform: uppercase;
+    height: 35px;
+    width: 300px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.botoneras {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-habilidad p {
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px 10px 8px;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 14px;
+}
+
+.btn-habilidad:hover {
+    border-color: #1c243c;
+    border-width: 2px;
+}
+
+
+.btn:hover {
+    color: #1c243c;
+ }
+
+.btn-habilidad i {
+    font-size: 20px;
+}
+
+.acciones {
+    margin-top: -20px;    
+}
+
+.acciones1 {
+    margin-top: -5px;
+}
+
+.btn-eliminar {
+    color: #dc3545;
 }
 
 @media (max-width: 992px) {

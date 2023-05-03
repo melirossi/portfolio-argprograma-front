@@ -1,6 +1,7 @@
 <div class="container" *ngIf="persona">
     <div class="row">
         <div>
+            <h1>Editar información básica</h1>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="img">Foto de perfil:</label>
@@ -38,9 +39,11 @@
                     <label for="github">GitHub:</label>
                     <input type="text" class="form-control" id="github" name="github" [(ngModel)]="persona.github" required>
                 </div>
-                <button class="btn btn-primary">
-                    Editar perfil
-                </button>
+                <div class="botonera">
+                    <button class="btn btn-primary">
+                        Editar información básica
+                    </button>
+                </div>
             </form>
         </div>
     </div>

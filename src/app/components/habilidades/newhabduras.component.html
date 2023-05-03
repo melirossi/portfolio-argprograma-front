@@ -1,14 +1,17 @@
 <div class="container">
     <div class="row">
         <div>
+            <h1>Agregar Habilidad Dura</h1>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombreHD">Nombre de la habilidad dura</label>
+                    <label for="nombreHD">Nombre de la habilidad:</label>
                     <input type="text" class="form-control" id="nombreHD" name="nombreHD" [(ngModel)]="nombreHD" required>
                 </div>        
-                <button class="btn btn-primary">
-                    Agregar habilidad dura
-                </button>
+                <div class="botonera">
+                    <button class="btn btn-primary">
+                        Agregar habilidad dura
+                    </button>
+                </div>
             </form>
         </div>
     </div>

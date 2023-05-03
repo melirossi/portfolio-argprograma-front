@@ -1,66 +1,76 @@
-<div class="col-lg-2">
-  <button class="btn btn-dark" type="button" routerLink="/nuevohabb" *ngIf="isLogged">
-    Nueva habilidad blanda
-  </button>
-  <button class="btn btn-dark" type="button" routerLink="/nuevohabd" *ngIf="isLogged">
-    Nueva habilidad dura
-  </button>
-  <button class="btn btn-dark" type="button" routerLink="/nuevoidioma" *ngIf="isLogged">
-    Nuevo idioma
-  </button>
-</div>
-
 <div class="habilidades"  id="habilidades">
     <div class="container-fluid">
 
       <div class="row">
         <div class="col">
-          <h1>Habilidades</h1>
+          <h1>Habilidades</h1>          
         </div>
       </div>
 
+      <div class="row">
+        <div class="col-lg-4 col-sm-12 botoneras">
+          <button class="btn btn-habilidad" type="button" routerLink="/nuevohabb" *ngIf="isLogged">
+            <i class="fas fa-plus"></i> 
+            <p>Habilidad Blanda</p> 
+          </button>
+        </div>
+          <div class="col-lg-4 col-sm-12 botoneras">
+          <button class="btn btn-habilidad" type="button" routerLink="/nuevohabd" *ngIf="isLogged">
+            <i class="fas fa-plus"></i> 
+            <p>Habilidad Dura</p>
+          </button>
+          </div>
+          <div class="col-lg-4 col-sm-12 botoneras">
+          <button class="btn btn-habilidad" type="button" routerLink="/nuevoidioma" *ngIf="isLogged">
+            <i class="fas fa-plus"></i> 
+            <p>Idioma</p>
+          </button>          
+        </div>
+      </div>      
+
       <div class="row text-center">          
           <div class="col-sm-12 col-lg-6"> 
-            <button type="button" class="btn nohover">Blandas</button>  
-            <li *ngFor="let Habblandas of habblandas">            
-              <div class="blandas">
+            <button type="button" class="btn nohover">Blandas</button>                         
+            <div class="blandas">
+              <li *ngFor="let Habblandas of habblandas"> 
                 <h2>{{Habblandas.nombreHB}}</h2>
-                <p>{{Habblandas.descripHB}}</p>                              
-              </div>
-              <div class="row" *ngIf="isLogged">
-                <div class="col">
-                  <button class="btn btn-danger" (click)="deleteHabblandas(Habblandas.id)">Eliminar</button>
-                </div>
-              </div>
-          </li>               
+                <p>{{Habblandas.descripHB}}</p> 
+                <div class="row" *ngIf="isLogged">
+                  <div class="col acciones">
+                    <button class="btn btn-eliminar" (click)="deleteHabblandas(Habblandas.id)"><i class="fas fa-trash-alt"></i></button>
+                  </div>
+                </div>                            
+              </li>  
+            </div>                
 
             <button type="button" class="btn nohover mt-3">Idiomas</button>    
-            <li *ngFor="let Idiomas of idiomas"> 
-              <div class="idiomas">
+            <div class="idiomas">
+              <li *ngFor="let Idiomas of idiomas"> 
                 <h2>{{Idiomas.nombreI}}</h2>
-                <span>{{Idiomas.descripI}}</span>                               
-              </div> 
-              <div class="row" *ngIf="isLogged">
-                <div class="col">
-                  <button class="btn btn-danger" (click)="deleteIdiomas(Idiomas.id)">Eliminar</button>
-                </div>
-              </div>
-            </li>        
+                <span>{{Idiomas.descripI}}</span> 
+                <div class="row" *ngIf="isLogged">
+                  <div class="col acciones1">
+                    <button class="btn btn-eliminar" (click)="deleteIdiomas(Idiomas.id)"><i class="fas fa-trash-alt"></i></button>
+                  </div>
+                </div>                                                     
+              </li> 
+            </div>         
           </div>
 
           <div class="col-sm-12 col-lg-6">
             <button type="button" class="btn nohover habduras">Duras</button>
-            <li *ngFor="let Habduras of habduras">   
-              <div class="duras">
-                <h2>{{Habduras.nombreHD}}</h2>              
-              </div>
-              <div class="row" *ngIf="isLogged">
-                <div class="col">
-                  <button class="btn btn-danger" (click)="deleteHabduras(Habduras.id)">Eliminar</button>
-                </div>
-              </div>
-            </li>
-          </div>
+            <div class="duras d-flex flex-wrap">
+              <div class="col-4" *ngFor="let Habduras of habduras">   
+                <h2>{{Habduras.nombreHD}}</h2> 
+                <div class="row" *ngIf="isLogged">
+                  <div class="col acciones1">
+                    <button class="btn btn-eliminar" (click)="deleteHabduras(Habduras.id)"><i class="fas fa-trash-alt"></i></button>
+                  </div>
+                </div>             
+              </div>              
+            </div>
+          </div>         
+
       </div>
     </div>
   </div>

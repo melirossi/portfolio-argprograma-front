@@ -24,30 +24,39 @@
     margin: 30px 10px;
     letter-spacing: 2px;
     font-family: 'Signika Negative', sans-serif;
-    font-size: 17px;
+    font-size: 20px;
     text-align: justify;
 }
 
-.perfil button {
+.botoneras {
+    display: flex;  
+    justify-content: end;
+}
+
+.btn-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #1c243c;
+    height: 35px;
+    width: 300px;
     color: white;
     text-transform: uppercase;
+    margin: 5px 15px;
+    text-align: center;    
+  }
+
+.btn-perfil p {
+    font-weight: bold;
     letter-spacing: 2px;
     font-family: 'Signika Negative', sans-serif;
-    font-size: 17px;
+    font-size: 14px;
+    margin: 0;
 }
 
-.perfil a .btn:hover {
-    color:#1c243c;
-    background-color: transparent;
-    border: 2px solid #1c243c;
-}
-
-.perfil a {
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 30px;
+.btn-perfil:hover {
+    border-color: #1c243c;
+    border-width: 2px;
 }
 
 @media (max-width: 992px) {
@@ -74,5 +83,10 @@
         justify-content: center;
         margin-right: auto;
         color: #e2ebf1
+    }
+    .btn-perfil {
+        height: 70px;  
+        line-height: 1.5;
+        margin: -20px auto 70px;      
     }
 }

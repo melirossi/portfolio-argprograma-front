@@ -61,9 +61,46 @@
     margin-bottom: 25px;
 }
 
-.experiencia i {
-    margin-right: 10px;
-    color:#2e536c;
+.btn-experiencia {
+    color: #1c243c;
+    border-radius: 50%;
+    padding: 12px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-top: 5.7px;
+}
+
+.btn-experiencia:hover {
+    border-color: #1c243c;
+    border-width: 2px;
+}
+
+
+.btn:hover {
+    color: #1c243c;
+ }
+
+.btn-experiencia i {
+    font-size: 20px;
+}
+
+.acciones {
+    text-align: end;
+    margin-right: 50px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+}
+
+.btn-editar {
+    color: #5e5e5e;
+}
+
+.btn-eliminar {
+    color: #dc3545;
 }
 
 @media (max-width: 992px) {

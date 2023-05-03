@@ -1,6 +1,7 @@
 <div class="container">
     <div class="row">
         <div>
+            <h1>Agregar Proyecto</h1>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="imagenProy">Imagen del proyecto</label>
@@ -26,9 +27,11 @@
                     <label for="urlProy">Link al repositorio:</label>
                     <input type="text" class="form-control" id="urlProy" name="urlProy" [(ngModel)]="urlProy" required>
                 </div>
-                <button class="btn btn-primary">
-                    Agregar proyecto
-                </button>
+                <div class="botonera">
+                    <button class="btn btn-primary">
+                        Agregar proyecto
+                    </button>
+                </div>
             </form>
         </div>
     </div>

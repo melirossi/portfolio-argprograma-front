@@ -3,49 +3,42 @@
 
       <div class="row">
         <div class="col">
-          <h1>Proyectos</h1>
+          <h1>Proyectos 
+            <button class="btn btn-proyectos" type="button" routerLink="/nuevoproy" *ngIf="isLogged">
+              <i class="fas fa-plus"></i>
+            </button>
+          </h1>
         </div>
       </div>
 
-      <div class="col-lg-2">
-        <button class="btn btn-dark" type="button" routerLink="/nuevoproy" *ngIf="isLogged">
-          Nuevo proyecto
-        </button>
-      </div>
 
       <div class="row">
-        <li *ngFor="let Proyectos of proyectos">         
-          <img src="/assets/Images/Portfolio.png" class="card-img-top" alt="proyecto" style="width:100px;">
-          <div class="card-body">
-            <h5 class="card-title">{{Proyectos.tituloProy}}</h5>
-            <p class="card-text">{{Proyectos.descripProy}}</p>
-            <p class="card-text">Año: {{Proyectos.fechaProy}}</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              <p class="card-text">Tecnologías utilizadas:</p>
-                <img class="img-fluid" src="/assets/Images/Bootstrap.png" style="width:50px;">
-            </li>
-          </ul>
-          <div class="card-body">
-            <a href={{Proyectos.urlProy}} target="_blank" class="card-link">Ir al repositorio</a>
-          </div>
-          <div class="row" *ngIf="isLogged">
-            <div class="col">
-              <button class="btn btn-secondary" routerLink="/editproy/{{Proyectos.id}}">Editar</button>
-              <button class="btn btn-danger" (click)="delete(Proyectos.id)">Eliminar</button>
+        <ng-container *ngFor="let Proyectos of proyectos; let i = index;">
+          <div class="card col-lg-4 col-md-12 mb-3">
+              <img src="/assets/Images/Portfolio.png" class="card-img-top" alt="proyecto" style="width:200px;">
+              <div class="card-body">
+                <h5 class="card-title">{{Proyectos.tituloProy}}</h5>
+                <p class="card-text">{{Proyectos.descripProy}}</p>
+                <p class="card-text">Año: {{Proyectos.fechaProy}}</p>
+                <ul class="list-group list-group-flush">
+                  <div class="list-group-item">
+                    <p class="card-text">Tecnologías utilizadas:</p>  
+                    <p class="card-text">{{Proyectos.tecnoProy}}</p>                  
+                  </div>                  
+                </ul>
+              </div>
+              <div class="card-body url">
+                <a href={{Proyectos.urlProy}} target="_blank" class="card-link">Ir al repositorio</a>
+              </div>
+              <div class="row" *ngIf="isLogged">
+                <div class="col acciones">
+                  <button class="btn btn-editar" routerLink="/editproy/{{Proyectos.id}}"><i class="fas fa-pencil-alt"></i></button>
+                  <button class="btn btn-eliminar" (click)="delete(Proyectos.id)"><i class="fas fa-trash-alt"></i></button>
+                </div>
+              </div>
             </div>
-          </div>
-      </li>
-    </div>
-</div>
-
-<div class="masproyect">
-  <div class="container-fluid">
-      <div class="row">
-      <div class="col-12">
-          <a href="https://github.com/melirossi?tab=repositories" target="_blank"><button type="button" class="btn">Ver más proyectos</button></a>
+        <div class="w-100" *ngIf="(i+1)%3 === 0 || i === proyectos.length - 1"></div>
+        </ng-container>
       </div>
-      </div>
-  </div>
+      
 </div>
