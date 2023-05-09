@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
-import { ImageService } from 'src/app/Services/image.service';
 import { ProyectosService } from 'src/app/Services/proyectos.service';
 import { Proyectos } from 'src/app/model/proyectos';
 
@@ -18,7 +17,7 @@ export class NewproyectoComponent {
   fechaProy: string;
   urlProy: string;
 
-  constructor(private proyectosService: ProyectosService, private router: Router, public imageService: ImageService, private activatedRouter: ActivatedRoute) {}
+  constructor(private proyectosService: ProyectosService, private router: Router, private activatedRouter: ActivatedRoute) {}
 
   // Crear nuevo proyecto:
   onCreate(): void{

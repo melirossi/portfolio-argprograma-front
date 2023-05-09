@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageService } from 'src/app/Services/image.service';
 import { PersonaService } from 'src/app/Services/persona.service';
 import { TokenService } from 'src/app/Services/token.service';
 import { persona } from 'src/app/model/persona.model';
@@ -18,7 +17,6 @@ export class PerfilComponent implements OnInit {
   constructor(
     public personaService: PersonaService,
     public tokenService: TokenService,
-    private imageService: ImageService
   ) {}
 
   isLogged = false;
@@ -38,12 +36,6 @@ export class PerfilComponent implements OnInit {
       (data) => {
         this.persona = data;
         console.log(this.persona)
-        // Cargar imageUrl
-        if (this.persona.img) {
-          this.imageService.getImageUrl(this.persona.img).then((url) => {
-            this.imageUrl = url;
-          });
-        }
       },
       (err) => {
         console.log(err);

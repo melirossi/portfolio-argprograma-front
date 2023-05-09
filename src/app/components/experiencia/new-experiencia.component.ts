@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ImageService } from 'src/app/Services/image.service';
 import { SExperienciaService } from 'src/app/Services/sExperiencia.service';
 import { Experiencia } from 'src/app/model/experiencia';
 
@@ -16,7 +15,7 @@ export class NewExperienciaComponent {
   nombreE: string = '';
   descripcionE: string = '';
 
-  constructor(private sExperiencia: SExperienciaService, private router: Router, public imageService: ImageService, private activatedRouter: ActivatedRoute) {}
+  constructor(private sExperiencia: SExperienciaService, private router: Router, private activatedRouter: ActivatedRoute) {}
 
   ngOnInit():void {
   }

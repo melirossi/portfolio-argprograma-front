@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ImageService } from 'src/app/Services/image.service';
 import { PortfolioService } from 'src/app/Services/portfolio.service';
 import { EducacionService } from 'src/app/Services/sEducacion.service';
 import { TokenService } from 'src/app/Services/token.service';
