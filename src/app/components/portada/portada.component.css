@@ -1,4 +1,4 @@
-/* Portada */
+/* Estilos portada */
 
 .portada {
     background-image: url("./../../../assets/Images/Portada.png");
@@ -23,6 +23,8 @@
     margin: 100px 0px;
 }
 
+/* Boton contacto */
+
 .portada button {
     background-color: #1c243c;
     color: white;
@@ -38,6 +40,8 @@
     color: #1c243c;
     border: 2px solid #1c243c;
 }
+
+/* Disenio responsivo */
 
 @media (max-width: 1400px) {
     .portada h1 {
