@@ -1,8 +1,10 @@
 /* Imports Google Fonts */
+
 @import url("https://fonts.googleapis.com/css2?family=Manrope&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap');
 
 /* Reset */
+
 * {
     box-sizing: border-box;
     margin: 0px;    

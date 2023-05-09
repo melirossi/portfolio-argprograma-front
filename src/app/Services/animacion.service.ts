@@ -7,6 +7,7 @@ export class AnimacionService {
 
     constructor() { }
 
+    // Cargar animación portada:
     Carga(archivos:string[]) {
       for (let archivo of archivos) {
         let script = document.createElement("script");

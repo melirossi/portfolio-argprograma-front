@@ -6,10 +6,12 @@ import { Storage, getDownloadURL, ref, uploadBytes } from '@angular/fire/storage
 })
 export class ImageService {
 
+  // Map de imagenes:
   images: { [key: string]: string } = {};
 
   constructor(private storage: Storage) {}
 
+  // Cargar imagen:
   public async uploadImage($event: any, name: string): Promise<void> {
     const file = $event.target.files[0];
     const imgRef = ref(this.storage, `imagen/${name}`);
@@ -21,12 +23,13 @@ export class ImageService {
     }
   }
 
+  // Obtener imagen:
   public async getImageUrl(name: string): Promise<string> {
     if (this.images[name]) {
-      // Si la URL ya se cargó previamente, la devuelve directamente
+      // Si la URL ya se cargo previamente, la devuelve directamente:
       return this.images[name];
     }
-    // Si la URL aún no se cargó, la obtiene y la guarda para futuras llamadas
+    // Si la URL aun no se cargo, la obtiene y la guarda para futuras llamadas:
     const imgRef = ref(this.storage, `imagen/${name}`);
     try {
       const url = await getDownloadURL(imgRef);
