@@ -27,12 +27,14 @@ export class ProyectosComponent {
     }
   }
 
+  // Obtener proyectos creados:
   cargarProyecto(): void{
     this.proyectsService.lista().subscribe(data =>{
       this.proyectos = data;
     })
   }
 
+  // Eliminar un proyecto por ID:
   delete(id?: number){
     if(id != undefined){
       this.proyectsService.delete(id).subscribe(data =>{

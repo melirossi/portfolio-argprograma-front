@@ -20,6 +20,7 @@ export class NewproyectoComponent {
 
   constructor(private proyectosService: ProyectosService, private router: Router, public imageService: ImageService, private activatedRouter: ActivatedRoute) {}
 
+  // Crear nuevo proyecto:
   onCreate(): void{
     const proyectos = new Proyectos(this.imagenProy, this.tituloProy, this.descripProy, this.tecnoProy, this.fechaProy, this.urlProy);
     this.proyectosService.save(proyectos).subscribe(data =>{

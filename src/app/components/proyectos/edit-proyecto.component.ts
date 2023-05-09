@@ -25,6 +25,7 @@ export class EditProyectoComponent {
     })
   }
 
+  // Editar proyecto: 
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.proyectosService.update(id, this.proyecto).subscribe(data =>{
