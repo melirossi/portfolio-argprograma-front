@@ -21,6 +21,7 @@ export class NewExperienciaComponent {
   ngOnInit():void {
   }
 
+  // Crear nueva experiencia:
   onCreate(): void {
     const expe = new Experiencia(this.imageE, this.tituloE, this.fechaE, this.nombreE, this.descripcionE);   
     this.sExperiencia.save(expe).subscribe({

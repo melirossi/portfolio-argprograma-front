@@ -27,6 +27,7 @@ export class EducacionComponent {
     }
   }
 
+  // Cargar lista de educaciones creadas:
   cargarEdu() {
     this.educacionS.lista().subscribe(
       (data) => {
@@ -38,6 +39,7 @@ export class EducacionComponent {
     );
   }
 
+  // Eliminar educacion por ID: 
   delete(id?: number){
     if(id != undefined){
       this.educacionS.delete(id).subscribe(data => {this.cargarEdu();}, err => { alert("No se pudo eliminar");})

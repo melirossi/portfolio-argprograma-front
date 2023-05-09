@@ -1,4 +1,4 @@
-/* Habilidades */
+/* Estilos habilidades */
 
 .habilidades {
     background: #e2ebf1;
@@ -30,6 +30,8 @@
     pointer-events: none;
 }
 
+/* Estilos habilidades blandas e idiomas */
+
 .habilidades .blandas, .idiomas {
     color: #1c243c;
     box-shadow: 0 3px 7px rgba(0,0,0,0.3);
@@ -43,6 +45,8 @@
 .habilidades .idiomas {
     padding-bottom: 25px;
 }
+
+/* Estilos habilidades duras */
 
 .habilidades .duras {
     color: #1c243c;
@@ -74,6 +78,8 @@
     font-family: 'Signika Negative', sans-serif;
     font-size: 17px;
 }
+
+/* Botones para agregar y eliminar habilidad o idioma */
 
 .btn-habilidad {
     display: flex;
@@ -129,6 +135,8 @@
 .btn-eliminar {
     color: #dc3545;
 }
+
+/* Disenio responsivo */
 
 @media (max-width: 992px) {
     .habilidades .habduras {

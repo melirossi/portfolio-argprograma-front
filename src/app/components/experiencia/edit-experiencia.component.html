@@ -4,8 +4,8 @@
             <h1>Editar Experiencia</h1>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="imageE">Logo de la empresa:</label>
-                    <input type="file" class="form-control" id="imageE" name="imageE" [(ngModel)]="expLab.imageE">
+                    <label for="imageE">Logo de la empresa (URL de la imagen):</label>
+                    <input type="text" class="form-control" id="imageE" name="imageE" [(ngModel)]="expLab.imageE">
                 </div>
                 <div class="form-group">
                     <label for="tituloE">Nombre del puesto:</label>

@@ -1,4 +1,6 @@
-/* Mensaje de bienvenida */
+/* Estilos navbar */
+
+/* Mensaje superior de bienvenida */
 
 .bienvenida {
     display: flex;
@@ -62,6 +64,8 @@
 nav .collapse {
     text-align: center;
 }
+
+/* Disenio responsivo */
 
 @media only screen and (max-width: 1097px) and (min-width: 992px) {
     .navbar img {

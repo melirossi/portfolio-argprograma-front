@@ -8,6 +8,7 @@ import { AnimacionService } from './../../Services/animacion.service'
 })
 export class PortadaComponent {
 
+  // Cargar animación letras desde el Service:
   constructor( private _CargaScripts:AnimacionService ){
     _CargaScripts.Carga(["animacion"]);
   }

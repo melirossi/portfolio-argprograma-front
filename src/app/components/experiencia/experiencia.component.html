@@ -3,6 +3,7 @@
     <div class="row">
       <div class="col">
         <h1>Experiencia
+          <!--Boton para nueva experiencia-->
           <button class="btn btn-experiencia" type="button" routerLink="/nuevaexp" *ngIf="isLogged">
             <i class="fas fa-plus"></i>
           </button>
@@ -13,7 +14,7 @@
     <li *ngFor="let Experiencia of expe">
       <div class="row">          
           <div class="col-sm-12 col-lg-1"> 
-            <img class="img-fluid" src="">                                 
+            <img class="img-fluid" src="{{Experiencia.imageE}}">                                 
           </div>    
           <div class="col-sm-12 col-lg-7">
             <h2>{{Experiencia.tituloE}}</h2> 
@@ -28,6 +29,7 @@
           <p>{{Experiencia.descripcionE}}</p>
         </div>
       </div>
+      <!--Botones para editar y eliminar experiencia-->
       <div class="row" *ngIf="isLogged">
         <div class="col acciones">
           <button class="btn btn-editar" routerLink="/editexp/{{Experiencia.id}}"><i class="fas fa-pencil-alt"></i></button>

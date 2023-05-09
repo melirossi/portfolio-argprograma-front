@@ -13,6 +13,7 @@ export class NewhabdurasComponent {
 
   constructor(private habdurasService: HabdurasService, private router: Router) {}
 
+  // Crear nueva habilidad dura: 
   onCreate(): void{
     const habduras = new Habduras(this.nombreHD);
     this.habdurasService.save(habduras).subscribe(data =>{

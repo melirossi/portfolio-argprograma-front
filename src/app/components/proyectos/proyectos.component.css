@@ -1,8 +1,10 @@
-/* Proyectos */
+/* Seccion proyectos */
 
 .proyectos {
     background: #e2ebf1;
 }
+
+/* Titulo seccion */
 
 .proyectos h1 {
     margin: 30px auto;
@@ -15,6 +17,8 @@
     flex-direction: row;
     align-items: center;    
 }
+
+/* Boton para crear proyecto nuevo */
 
 .btn-proyectos {
     color: #1c243c;
@@ -37,6 +41,8 @@
 .btn-proyectos i {
     font-size: 20px;
 }
+
+/* Estilo card */
 
 .proyectos .card {
     width: 400px;
@@ -112,6 +118,8 @@ img {
 .url {
     margin-top: -100px;
 }
+
+/* Botones editar y eliminar */
 
 .btn:hover {
     color: #1c243c;

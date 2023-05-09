@@ -27,11 +27,13 @@ export class NavComponent {
     }
   }
 
+  // Cerrar sesion:
   onLogOut():void{
     this.tokenService.logOut();
     window.location.reload();
   }
 
+  // Cargar datos de persona (mail y url linkedin - github para navbar):
   cargarPersona(){
     this.personaService.detail(1).subscribe(data => 
       {this.persona = data}

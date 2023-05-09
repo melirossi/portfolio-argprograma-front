@@ -24,10 +24,12 @@ export class ExperienciaComponent implements OnInit {
     }
   }
 
+  // Cargar lista de experiencias creadas:
   cargarExperiencia(): void {
     this.sExperiencia.lista().subscribe(data => { this.expe = data; })
   }
 
+  // Eliminar experiencia por ID:
   delete(id?: number){
     if(id != undefined){
       this.sExperiencia.delete(id).subscribe({

@@ -14,6 +14,7 @@ export class NewidiomasComponent {
 
   constructor(private idiomasService: IdiomasService, private router: Router) {}
 
+  // Crear nuevo idioma: 
   onCreate(): void{
     const idiomas = new Idiomas(this.nombreI, this.descripI);
     this.idiomasService.save(idiomas).subscribe(data =>{

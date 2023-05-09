@@ -9,7 +9,11 @@ import { Observable } from "rxjs";
 export class InterceptorService {
     constructor(private tokenService: TokenService){}
 
+<<<<<<< HEAD
     // Interceptor:
+=======
+    // Interceptor token:
+>>>>>>> experimental
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
         let intReq = req;
         const token = this.tokenService.getToken();

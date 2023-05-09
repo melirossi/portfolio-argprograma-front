@@ -4,8 +4,8 @@
             <h1>Agregar Educación</h1>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="imageEdu">Logo de la institución:</label>
-                    <input type="file" class="form-control" id="imageEdu" name="imageEdu" [(ngModel)]="imageEdu">
+                    <label for="imageEdu">Logo de la institución (URL de la imagen):</label>
+                    <input type="text" class="form-control" id="imageEdu" name="imageEdu" [(ngModel)]="imageEdu">
                 </div>
                 <div class="form-group">
                     <label for="cursoEdu">Nombre del curso:</label>

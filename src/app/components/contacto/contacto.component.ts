@@ -25,6 +25,7 @@ export class ContactoComponent {
     }
   }
 
+  // Cargar persona:
   cargarPersona(){
     this.personaService.detail(1).subscribe(data => 
       {this.persona = data}
