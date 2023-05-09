@@ -13,29 +13,35 @@ export class TokenService {
 
     constructor() {}
 
+    // Generar token:
     public setToken(token: string): void {
         window.sessionStorage.removeItem(TOKEN_KEY);
         window.sessionStorage.setItem(TOKEN_KEY, token);
     }
 
+    // Obtener token:
     public getToken():string {
         return sessionStorage.getItem(TOKEN_KEY)!
     }
 
+    // Generar usuario:
     public setUserName(userName: string): void {
         window.sessionStorage.removeItem(USERNAME_KEY);
         window.sessionStorage.setItem(USERNAME_KEY, userName);
     }
 
+    // Obtener usuario:
     public getUserName():string {
         return sessionStorage.getItem(USERNAME_KEY)!
     }
 
+    // Generar autoridades (user - admin):
     public setAuthorities(authorities: string[]): void {
         window.sessionStorage.removeItem(AUTHORITIES_KEY);
         window.sessionStorage.setItem(AUTHORITIES_KEY, JSON.stringify(authorities));
     }
 
+    // Obtener autoridades (user - admin):
     public getAuthorities(): string[]{
         this.roles = [];
         if(sessionStorage.getItem(AUTHORITIES_KEY)!){
@@ -46,6 +52,7 @@ export class TokenService {
         return this.roles;
     }
 
+    // Cerrar sesion:
     public logOut():void {
         window.sessionStorage.clear();
     }

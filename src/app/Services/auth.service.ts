@@ -10,14 +10,18 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 
 export class AuthService {
+
+    // Llamar backend:
     authURL = 'https://melisa-portfolio-service.onrender.com/auth/';
 
     constructor(private httpClient: HttpClient) { }
 
+    // Crear nuevo usuario:
     public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
         return this.httpClient.post<any>(this.authURL + 'nuevo', nuevoUsuario);
     }
 
+    // Login usuario:
     public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
         return this.httpClient.post<JwtDto>(this.authURL + 'login', loginUsuario);
     }
