@@ -27,6 +27,7 @@ export class EditExperienciaComponent {
     )
   }
 
+  // Editar experiencia por ID:
    onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe({
