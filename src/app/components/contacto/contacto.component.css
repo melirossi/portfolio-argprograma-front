@@ -1,4 +1,4 @@
-/* Contacto */
+/* Estilos contacto */
 
 .contacto {
     box-shadow: 0 3px 7px rgba(0,0,0,0.3);
@@ -65,6 +65,8 @@
 .contacto .card-body a i:hover {
     color: #2e536c;
 }
+
+/* Disenio responsivo */
 
 @media (max-width: 1300px) {
     .contacto {

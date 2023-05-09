@@ -22,6 +22,7 @@ export class NewEducacionComponent {
   ngOnInit(): void {    
   }
 
+  // Crear nueva educacion:
   onCreate(): void {
       const educacion = new Educacion(this.imageEdu, this.cursoEdu, this.fechaEdu, this.instiEdu, this.descrpEdu);
       this.educacionS.save(educacion).subscribe(

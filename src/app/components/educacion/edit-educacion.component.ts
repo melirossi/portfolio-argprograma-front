@@ -26,6 +26,7 @@ export class EditEducacionComponent {
     })
   }
 
+  // Editar educacion por ID:
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.update(id, this.educacion).subscribe(data =>{
