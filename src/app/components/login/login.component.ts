@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  // Inicio de sesion (usuario y contrasenia):
   onLogin(): void{
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
     this.authService.login(this.loginUsuario).subscribe(data =>{
