@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ImageService } from 'src/app/Services/image.service';
 import { EducacionService } from 'src/app/Services/sEducacion.service';
 import { Educacion } from 'src/app/model/educacion';
 
@@ -16,7 +17,7 @@ export class NewEducacionComponent {
   instiEdu: string;
   descrpEdu: string;
 
-  constructor(private educacionS: EducacionService, private router: Router) {}
+  constructor(private educacionS: EducacionService, private router: Router, public imageService: ImageService, private activatedRouter: ActivatedRoute) {}
 
   ngOnInit(): void {    
   }
@@ -32,4 +33,7 @@ export class NewEducacionComponent {
       }
     )
   }
+
+  
+
 }

@@ -2,7 +2,7 @@
     <div class="container-fluid">
       <div class="row">          
           <div class="foto col-sm-12 col-lg-3 g-0"> 
-            <img class="img-fluid" src="/assets/Images/Carnet.png" alt="fotodeperfil">               
+            <img class="img-fluid" *ngIf="persona?.img" [src]="imageUrl" alt="fotodeperfil">               
           </div>
           <div class="col-sm-12 col-lg-9 p-5">
             <div class="row">

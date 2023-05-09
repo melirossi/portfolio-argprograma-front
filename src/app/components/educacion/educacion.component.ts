@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ImageService } from 'src/app/Services/image.service';
 import { PortfolioService } from 'src/app/Services/portfolio.service';
 import { EducacionService } from 'src/app/Services/sEducacion.service';
 import { TokenService } from 'src/app/Services/token.service';
@@ -13,7 +14,7 @@ export class EducacionComponent {
   
   educacion: Educacion[] = [];
 
-  constructor(private educacionS: EducacionService, private tokenService: TokenService) {}
+    constructor(private educacionS: EducacionService, private tokenService: TokenService) {}
 
   isLogged = false;
 
@@ -26,8 +27,15 @@ export class EducacionComponent {
     }
   }
 
-  cargarEdu(): void{
-    this.educacionS.lista().subscribe(data => {this.educacion = data;})
+  cargarEdu() {
+    this.educacionS.lista().subscribe(
+      (data) => {
+        this.educacion = data;
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
 
   delete(id?: number){

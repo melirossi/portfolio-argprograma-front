@@ -7,7 +7,7 @@ import { Habduras } from '../model/habduras';
   providedIn: 'root'
 })
 export class HabdurasService {
-  URL = 'http://localhost:8080/habduras/';
+  URL = 'https://melisa-portfolio-service.onrender.com/habduras/';
 
   constructor(private httpClient : HttpClient) { }
 

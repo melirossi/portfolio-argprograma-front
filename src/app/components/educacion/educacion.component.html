@@ -14,7 +14,7 @@
     <li *ngFor="let Educacion of educacion">
       <div class="row">          
         <div class="col-sm-12 col-lg-1"> 
-          <img class="img-fluid" src="/assets/Images/ArgPrograma.svg" alt="Argentina Programa">                                 
+          <img class="img-fluid" *ngIf="Educacion?.imageEdu" [src]="" alt="Argentina Programa">                                 
         </div>    
         <div class="col-sm-12 col-lg-7">
           <h2>{{Educacion.cursoEdu}}</h2> 

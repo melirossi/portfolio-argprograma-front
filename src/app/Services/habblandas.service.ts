@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class HabblandasService {
 
-  URL = 'http://localhost:8080/habblandas/';
+  URL = 'https://melisa-portfolio-service.onrender.com/habblandas/';
 
   constructor(private httpClient : HttpClient) { }
 

@@ -15,7 +15,7 @@
       <div class="row">
         <ng-container *ngFor="let Proyectos of proyectos; let i = index;">
           <div class="card col-lg-4 col-md-12 mb-3">
-              <img src="/assets/Images/Portfolio.png" class="card-img-top" alt="proyecto" style="width:200px;">
+            <img class="card-img-top" *ngIf="Proyectos.imagenProy" [src]="" alt="proyecto" style="width: 200px;">
               <div class="card-body">
                 <h5 class="card-title">{{Proyectos.tituloProy}}</h5>
                 <p class="card-text">{{Proyectos.descripProy}}</p>

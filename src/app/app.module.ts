@@ -34,6 +34,9 @@ import { EditProyectoComponent } from './components/proyectos/edit-proyecto.comp
 import { NewhabblandasComponent } from './components/habilidades/newhabblandas.component';
 import { NewhabdurasComponent } from './components/habilidades/newhabduras.component';
 import { NewidiomasComponent } from './components/habilidades/newidiomas.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -64,7 +67,9 @@ import { NewidiomasComponent } from './components/habilidades/newidiomas.compone
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     AnimacionService, 

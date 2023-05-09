@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ImageService } from 'src/app/Services/image.service';
 import { PersonaService } from 'src/app/Services/persona.service';
 import { persona } from 'src/app/model/persona.model';
 
@@ -11,22 +12,34 @@ import { persona } from 'src/app/model/persona.model';
 export class EditPerfilComponent {
 
   persona: persona = null;
+  imageUrl: string = null;
 
-  constructor(private activatedRouter: ActivatedRoute, private personaService: PersonaService, private router: Router) {}
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private personaService: PersonaService,
+    private imageService: ImageService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    const id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRoute.snapshot.params['id'];
     this.personaService.detail(id).subscribe(
       data => { 
         this.persona = data;
-    }, err => {
-      alert("Errora al modificar el perfil");
-      this.router.navigate(['']);
-    })
+        this.imageService.getImageUrl(`perfil_${id}`).then(url => {
+          this.imageUrl = url;
+        }).catch(error => console.log(error));
+      }, 
+      err => {
+        alert("Error al modificar el perfil");
+        this.router.navigate(['']);
+      }
+    )
   }
 
   onUpdate(): void{
-    const id = this.activatedRouter.snapshot.params['id'];
+    const id = this.activatedRoute.snapshot.params['id'];
+    this.persona.img = this.imageUrl;
     this.personaService.update(id, this.persona).subscribe({
       next: (data) => {
         this.router.navigate(['']);
@@ -38,7 +51,13 @@ export class EditPerfilComponent {
     });       
   }
 
-  uploadImage($event: any){
-    
-  }
+  uploadImage($event: any){ 
+    const id = this.activatedRoute.snapshot.params['id']; 
+    const name = "perfil_" + id;
+    this.imageService.uploadImage($event, name).then(() => {
+      this.imageService.getImageUrl(name).then(url => {
+        this.imageUrl = url;
+      }).catch(error => console.log(error));
+    }).catch(error => console.log(error));
+  } 
 }

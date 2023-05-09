@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ImageService } from 'src/app/Services/image.service';
 import { PersonaService } from 'src/app/Services/persona.service';
 import { TokenService } from 'src/app/Services/token.service';
 import { persona } from 'src/app/model/persona.model';
@@ -8,29 +9,46 @@ import { persona } from 'src/app/model/persona.model';
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.css']
 })
-export class PerfilComponent {
+export class PerfilComponent implements OnInit {
 
   persona: persona = null;
 
-  miPortfolio:any;
+  miPortfolio: any;
 
-  constructor(public personaService: PersonaService, public tokenService: TokenService) {}
+  imageUrl: string;
+
+  constructor(
+    public personaService: PersonaService,
+    public tokenService: TokenService,
+    private imageService: ImageService
+  ) {}
 
   isLogged = false;
 
-  ngOnInit(): void {    
+  ngOnInit(): void {
     this.cargarPersona();
-    if(this.tokenService.getToken()){
+    if (this.tokenService.getToken()) {
       this.isLogged = true;
     } else {
       this.isLogged = false;
     }
   }
 
-  cargarPersona(){
-    this.personaService.detail(1).subscribe(data => 
-      {this.persona = data}
-    )
+  cargarPersona() {
+    this.personaService.detail(1).subscribe(
+      (data) => {
+        this.persona = data;
+        console.log(this.persona)
+        if (this.persona.img) {
+          this.imageService.getImageUrl(this.persona.img).then((url) => {
+            this.imageUrl = url;
+          });
+        }
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
-
 }
+

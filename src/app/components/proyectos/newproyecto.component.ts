@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { ImageService } from 'src/app/Services/image.service';
 import { ProyectosService } from 'src/app/Services/proyectos.service';
 import { Proyectos } from 'src/app/model/proyectos';
 
@@ -17,7 +18,7 @@ export class NewproyectoComponent {
   fechaProy: string;
   urlProy: string;
 
-  constructor(private proyectosService: ProyectosService, private router: Router) {}
+  constructor(private proyectosService: ProyectosService, private router: Router, public imageService: ImageService, private activatedRouter: ActivatedRoute) {}
 
   onCreate(): void{
     const proyectos = new Proyectos(this.imagenProy, this.tituloProy, this.descripProy, this.tecnoProy, this.fechaProy, this.urlProy);
@@ -30,5 +31,6 @@ export class NewproyectoComponent {
     }
     )
   }
+
 
 }

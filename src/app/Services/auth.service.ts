@@ -10,7 +10,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 })
 
 export class AuthService {
-    authURL = 'http://localhost:8080/auth/';
+    authURL = 'https://melisa-portfolio-service.onrender.com/auth/';
 
     constructor(private httpClient: HttpClient) { }
 

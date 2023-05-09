@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ImageService } from 'src/app/Services/image.service';
 import { SExperienciaService } from 'src/app/Services/sExperiencia.service';
 import { Experiencia } from 'src/app/model/experiencia';
 
@@ -15,13 +16,13 @@ export class NewExperienciaComponent {
   nombreE: string = '';
   descripcionE: string = '';
 
-  constructor(private sExperiencia: SExperienciaService, private router: Router) {}
+  constructor(private sExperiencia: SExperienciaService, private router: Router, public imageService: ImageService, private activatedRouter: ActivatedRoute) {}
 
   ngOnInit():void {
   }
 
   onCreate(): void {
-    const expe = new Experiencia(this.imageE, this.tituloE, this.fechaE, this.nombreE, this.descripcionE);
+    const expe = new Experiencia(this.imageE, this.tituloE, this.fechaE, this.nombreE, this.descripcionE);   
     this.sExperiencia.save(expe).subscribe({
       next: (data) => {
       alert('Experiencia agregada');
@@ -33,4 +34,5 @@ export class NewExperienciaComponent {
       }
       });
   }
+
 }

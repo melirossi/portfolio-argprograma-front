@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 
 export class SExperienciaService {
-    expURL = 'http://localhost:8080/explab/'
+    expURL = 'https://melisa-portfolio-service.onrender.com/explab/'
     constructor(private httpClient: HttpClient) { }
 
     public lista(): Observable<Experiencia[]>{

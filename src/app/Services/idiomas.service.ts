@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class IdiomasService {
-  URL = 'http://localhost:8080/idiomas/';
+  URL = 'https://melisa-portfolio-service.onrender.com/idiomas/';
 
   constructor(private httpClient : HttpClient) { }
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ImageService } from 'src/app/Services/image.service';
 import { ProyectosService } from 'src/app/Services/proyectos.service';
 import { Proyectos } from 'src/app/model/proyectos';
 
@@ -12,7 +13,7 @@ export class EditProyectoComponent {
 
   proyecto: Proyectos = null;
 
-  constructor(private proyectosService: ProyectosService, private activatedRouter: ActivatedRoute, private router: Router) {}
+  constructor(private proyectosService: ProyectosService, private activatedRouter: ActivatedRoute, private router: Router, public imageService: ImageService) {}
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -33,4 +34,5 @@ export class EditProyectoComponent {
       this.router.navigate(['']);
     })
   }
+
 }
