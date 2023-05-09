@@ -13,8 +13,6 @@ export class PerfilComponent implements OnInit {
 
   persona: persona = null;
 
-  miPortfolio: any;
-
   imageUrl: string;
 
   constructor(
@@ -34,11 +32,13 @@ export class PerfilComponent implements OnInit {
     }
   }
 
+  // Cargar persona creada:
   cargarPersona() {
     this.personaService.detail(1).subscribe(
       (data) => {
         this.persona = data;
         console.log(this.persona)
+        // Cargar imageUrl
         if (this.persona.img) {
           this.imageService.getImageUrl(this.persona.img).then((url) => {
             this.imageUrl = url;

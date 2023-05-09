@@ -37,6 +37,7 @@ export class EditPerfilComponent {
     )
   }
 
+  // Editar persona:
   onUpdate(): void{
     const id = this.activatedRoute.snapshot.params['id'];
     this.persona.img = this.imageUrl;
@@ -51,6 +52,7 @@ export class EditPerfilComponent {
     });       
   }
 
+  // Editar imagen de perfil:
   uploadImage($event: any){ 
     const id = this.activatedRoute.snapshot.params['id']; 
     const name = "perfil_" + id;

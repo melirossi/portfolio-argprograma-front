@@ -5,6 +5,7 @@
             <img class="img-fluid" *ngIf="persona?.img" [src]="imageUrl" alt="fotodeperfil">               
           </div>
           <div class="col-sm-12 col-lg-9 p-5">
+            <!--Boton para editar persona-->
             <div class="row">
               <div class="col botoneras">
                 <button class="btn btn-perfil" type="button" routerLink="/editacercade/{{persona.id}}" *ngIf="isLogged">
