@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ImageService } from 'src/app/Services/image.service';
 import { SExperienciaService } from 'src/app/Services/sExperiencia.service';
 import { Experiencia } from 'src/app/model/experiencia';
 
@@ -13,7 +12,7 @@ export class EditExperienciaComponent {
 
   expLab : Experiencia = null;
 
-  constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute, private router: Router, public imageService: ImageService) {}
+  constructor(private sExperiencia: SExperienciaService, private activatedRouter: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
