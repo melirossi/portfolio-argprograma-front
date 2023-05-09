@@ -33,24 +33,28 @@ export class HabilidadesComponent {
     }
   }
 
+  // Cargar lista de habilidades blandas:
   cargarHabblandas(): void{
     this.habblandasService.lista().subscribe(data =>{
       this.habblandas = data;
     })
   }
 
+  // Cargar lista de habilidades duras:
   cargarHabduras(): void{
     this.habdurasService.lista().subscribe(data =>{
       this.habduras = data;
     })
   }
 
+  // Cargar lista de idiomas:
   cargarIdiomas(): void{
     this.idiomasService.lista().subscribe(data =>{
       this.idiomas = data;
     })
   }
 
+  // Eliminar habilidad blanda por ID:
   deleteHabblandas(id?: number){
     if(id != undefined){
       this.habblandasService.delete(id).subscribe(data =>{
@@ -62,6 +66,7 @@ export class HabilidadesComponent {
     }
   }
 
+  // Eliminar habilidad dura por ID:
   deleteHabduras(id?: number){
     if(id != undefined){
       this.habdurasService.delete(id).subscribe(data =>{
@@ -73,6 +78,7 @@ export class HabilidadesComponent {
     }
   }
 
+  // Eliminar idioma por ID:
   deleteIdiomas(id?: number){
     if(id != undefined){
       this.idiomasService.delete(id).subscribe(data =>{

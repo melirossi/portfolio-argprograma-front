@@ -7,6 +7,7 @@
         </div>
       </div>
 
+      <!--Botones para nueva habilidad o idioma-->
       <div class="row">
         <div class="col-lg-4 col-sm-12 botoneras">
           <button class="btn btn-habilidad" type="button" routerLink="/nuevohabb" *ngIf="isLogged">
@@ -28,6 +29,7 @@
         </div>
       </div>      
 
+      <!--Habilidades blandas-->
       <div class="row text-center">          
           <div class="col-sm-12 col-lg-6"> 
             <button type="button" class="btn nohover">Blandas</button>                         
@@ -35,6 +37,7 @@
               <li *ngFor="let Habblandas of habblandas"> 
                 <h2>{{Habblandas.nombreHB}}</h2>
                 <p>{{Habblandas.descripHB}}</p> 
+                <!--Boton para eliminar habilidad blanda-->
                 <div class="row" *ngIf="isLogged">
                   <div class="col acciones">
                     <button class="btn btn-eliminar" (click)="deleteHabblandas(Habblandas.id)"><i class="fas fa-trash-alt"></i></button>
@@ -43,11 +46,13 @@
               </li>  
             </div>                
 
+            <!--Idiomas-->
             <button type="button" class="btn nohover mt-3">Idiomas</button>    
             <div class="idiomas">
               <li *ngFor="let Idiomas of idiomas"> 
                 <h2>{{Idiomas.nombreI}}</h2>
                 <span>{{Idiomas.descripI}}</span> 
+                <!--Boton para eliminar idioma-->
                 <div class="row" *ngIf="isLogged">
                   <div class="col acciones1">
                     <button class="btn btn-eliminar" (click)="deleteIdiomas(Idiomas.id)"><i class="fas fa-trash-alt"></i></button>
@@ -57,11 +62,13 @@
             </div>         
           </div>
 
+          <!--Habilidades duras-->
           <div class="col-sm-12 col-lg-6">
             <button type="button" class="btn nohover habduras">Duras</button>
             <div class="duras d-flex flex-wrap">
               <div class="col-4" *ngFor="let Habduras of habduras">   
                 <h2>{{Habduras.nombreHD}}</h2> 
+                <!--Boton para eliminar habilidad dura-->
                 <div class="row" *ngIf="isLogged">
                   <div class="col acciones1">
                     <button class="btn btn-eliminar" (click)="deleteHabduras(Habduras.id)"><i class="fas fa-trash-alt"></i></button>

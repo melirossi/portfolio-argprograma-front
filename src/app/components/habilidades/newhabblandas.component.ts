@@ -14,6 +14,7 @@ export class NewhabblandasComponent {
 
   constructor(private habblandasService: HabblandasService, private router: Router) {}
 
+  // Crear nueva habilidad blanda: 
   onCreate(): void{
     const habblandas = new Habblandas(this.nombreHB, this.descripHB);
     this.habblandasService.save(habblandas).subscribe(data =>{
