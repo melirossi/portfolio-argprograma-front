@@ -27,7 +27,7 @@ The frontend of this project has been developed using 𝗔𝗻𝗴𝘂𝗹𝗮�
 <summary><h3> Web Architecture <h3></summary>
   
 <p align="center">
-<img src="https://github.com/melirossi/portfolio-yoprogramo-front/blob/master/Web%20architecture.jpg" alt="web architecture" height="1500">
+<img src="https://firebasestorage.googleapis.com/v0/b/melisa-portfolio.appspot.com/o/Arquitectura%20web.jpg?alt=media&token=cea5e069-1e01-41d7-80e5-c69c2d155069" alt="web architecture" height="1500">
 </p>
   
 </details>
