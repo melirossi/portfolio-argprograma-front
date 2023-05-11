@@ -9,7 +9,7 @@ import { Habduras } from '../model/habduras';
 export class HabdurasService {
 
   // Llamar al backend:
-  URL = 'https://melisa-portfolio-service.onrender.com/habduras/';
+  URL = 'https://portfolio-melisa-service.onrender.com/habduras/';
 
   constructor(private httpClient : HttpClient) { }
 

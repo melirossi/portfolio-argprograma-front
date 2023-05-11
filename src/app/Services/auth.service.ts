@@ -12,7 +12,7 @@ import { NuevoUsuario } from '../model/nuevo-usuario';
 export class AuthService {
 
     // Llamar backend:
-    authURL = 'https://melisa-portfolio-service.onrender.com/auth/';
+    authURL = 'https://portfolio-melisa-service.onrender.com/auth/';
 
     constructor(private httpClient: HttpClient) { }
 

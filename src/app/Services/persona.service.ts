@@ -10,7 +10,7 @@ import { persona } from '../model/persona.model';
 export class PersonaService {
 
   // Llamar backend:
-  URL = 'https://melisa-portfolio-service.onrender.com/personas/';
+  URL = 'https://portfolio-melisa-service.onrender.com/personas/';
 
   constructor(private httpClient: HttpClient) { }
 

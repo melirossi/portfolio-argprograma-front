@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class IdiomasService {
 
   // Llamar al backend:
-  URL = 'https://melisa-portfolio-service.onrender.com/idiomas/';
+  URL = 'https://portfolio-melisa-service.onrender.com/idiomas/';
 
   constructor(private httpClient : HttpClient) { }
 

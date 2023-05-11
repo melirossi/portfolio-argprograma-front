@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class SExperienciaService {
 
     // Llamado al backend:
-    expURL = 'https://melisa-portfolio-service.onrender.com/explab/'
+    expURL = 'https://portfolio-melisa-service.onrender.com/explab/'
     
     constructor(private httpClient: HttpClient) { }
 

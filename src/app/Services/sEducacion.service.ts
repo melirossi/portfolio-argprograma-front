@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class EducacionService {
 
     // Llamado al backend:
-    eduURL = 'https://melisa-portfolio-service.onrender.com/educacion/'
+    eduURL = 'https://portfolio-melisa-service.onrender.com/educacion/'
 
     constructor(private httpClient: HttpClient){}
 

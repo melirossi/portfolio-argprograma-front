@@ -9,7 +9,7 @@ import { Proyectos } from '../model/proyectos';
 export class ProyectosService {
 
   // Llamado al backend:
-  URL = 'https://melisa-portfolio-service.onrender.com/proyectos/';
+  URL = 'https://portfolio-melisa-service.onrender.com/proyectos/';
 
   constructor(private httpClient : HttpClient) { }
 
